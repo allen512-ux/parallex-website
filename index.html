@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Website</title>
+    <link rel="stylesheet" href="style.css">
+     <!-- fontaswesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar" id="home">
+        <div class="logo">MoonLight</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#adventures">Adventures</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <section >
+        <img src="./images/bg.jpg" id="bg">
+        <img src="./images/moon.png" id="moon">
+        <img src="./images/mountain.png" id="mountain">
+        <img src="./images/road.png" id="road">
+        <h2 id="text">LUNAR HORIZON</h2>
+    </section>
+
+    <header class="page-header" id="destinations">
+        <h1 class="page-title">Destinations</h1>
+    </header>
+
+    <!-- Additional Section -->
+    <section class="l-section" id="section">
+        <class="section">
+            <div class="section__data">
+                <h2 class="section__title">Banff National Park</h2>
+                <p class="section__text">
+                    Banff National Park offers breathtaking views <br>with  turquoise lakes and majestic mountains. <br>  It’s a  perfect  getaway  for relaxation and <br> scenic hikes in Canada.
+               <!-- button -->
+
+
+
+                </p>
+            </div>
+           
+
+
+
+
+
+
+
+            <img src="./images/wallpaperflare-cropped (1).jpg" alt="Scaling Mountains" class="section__img"  data-aos="zoom-in" data-aos-duration="1000" >
+            
+        </div>
+      
+</section>
+ <header class="page-header" id="adventures">
+        <h1 class="page-title">Adventures</h1>
+    </header>
+
+<section class="l-sections" id="section">
+    
+    <div class="sections">
+        <div class="sections__data">
+            <h2 class="sections__title">Mount Everest </h2>
+            <p class="sections__text">
+                Mount Everest is the highest peak on  Earth,<br> attracting climbers and trekkers from <br> around the world.Mount Everest,<br> located in Nepal
+            </p>
+        </div>
+        <img src="./images/wallpaperflare-cropped.jpg" alt="Scaling Mountains" class="sections__img"  data-aos="zoom-in" data-aos-duration="1000">
+    </div>
+
+</section>
+
+<header class="page-header" id="contact">
+    <h1 class="page-title">Contact</h1>
+</header>
+
+
+
+<section class="contact">
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feel free to reach out to us!</p>
+        <form action="submit_form.php" method="POST">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+  
+</section>
+<div class="icon upArrow">
+    <a href="#home"><i class="fa-solid fa-chevron-up brands"></i></a>
+    
+ </div>
+
+<footer class="footer">
+    <div class="footer-container">
+       <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#adventures">Adventures</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+ <!-- Icons Section Below Contact Form -->
+ <div class="contact-icons">
+    <a href="tel:+918281877277" class="icon" target="_blank"><i class="fa fa-phone"></i></a>
+    <a href="mailto:allensajan17@gmail.com" class="icon" target="_blank"><i class="fa fa-envelope"></i></a>
+    <a href="https://www.google.com/maps?q=Puliyelil+Bunglow,+Channapetta,+India" class="icon" target="_blank"><i class="fa fa-map-marker"></i></a>
+</div>
+ <p>&copy; 2024 MoonLight. All Rights Reserved.</p>
+    </div>
+
+
+</footer>
+
+
+
+
+
+
+
+    <script type="text/javascript">
+        let bg = document.getElementById("bg");
+        let moon = document.getElementById("moon");
+        let mountain = document.getElementById("mountain");
+        let road = document.getElementById("road");
+        let text = document.getElementById("text");
+
+        window.addEventListener('scroll', function () {
+            var value = window.scrollY;
+
+            bg.style.top = value * 0.5 + 'px';
+            moon.style.left = -value * 0.5 + 'px';
+            mountain.style.top = -value * 0.15 + 'px';
+            road.style.top = value * 0.15 + 'px';
+            text.style.top = value * 1 + 'px';
+        });
+    </script>
+
+
+
+
+
+
+</body>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
+</html>
